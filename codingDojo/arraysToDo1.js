@@ -145,26 +145,27 @@ function removeDuplicates(arr){
     // console.log(newSet.values())
     
     for(let i = 0; i < arr.length; i++){
-        let count = 0
-        arr.forEach(index => {
-            if (index === arr[i]) {
-            count += 1;
-            }
-        });
+        // let count = 0
+        // arr.forEach(index => {
+        //     if (index === arr[i]) {
+        //     count += 1;
+        //     }
+        // });
         // for(let x = 0; x < arr.length; x++){ // instead of forEach could use regular for loop here
         //     if(arr[x] === arr[i]){
         //         count += 1;
         //     }
         // }
         if(arr[i] == arr[i+1]){
-            arr.splice(i, count-1) // - easy way of doing it
+            arr.splice(i, 1) // - can do count-1 as the number of items to be deleted if you want to run either of the loops above
             // console.log(arr)
+            i -= 1; // reset the current itterated index position since now the array has shortened.
         }
     }
     console.log(arr)
 }
 
-removeDuplicates([-2,-2,3.14,5,5,10]) // => [-2,3.14,5,10]
+removeDuplicates([-2,-2,3.14,5, 5,10]) // => [-2,3.14,5,10]
 removeDuplicates([9,19,19,19,19,19,29]) // => [9,19,29]
 
 // End
