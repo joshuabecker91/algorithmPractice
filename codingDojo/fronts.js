@@ -38,6 +38,8 @@ class SLL { // The signly-linked list class itself
             // console.log(this.head.value);
             return this.head.value;
         }
+        // alternatively we can use a ternary operator to shorthand this syntax
+        // return this.head ? this.head.value : null;
     }
 
 }
