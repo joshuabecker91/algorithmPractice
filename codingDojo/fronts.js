@@ -32,8 +32,12 @@ class SLL { // The signly-linked list class itself
     }
 
     front(){
-        console.log(this.head.value);
-        return this.head.value;
+        if (this.head == null){
+            return null;
+        } else {
+            // console.log(this.head.value);
+            return this.head.value;
+        }
     }
 
 }
@@ -48,4 +52,5 @@ console.log(mySLL);
 mySLL.removeFront();
 console.log(mySLL);
 
-mySLL.front();
+// mySLL.front();
+console.log(mySLL.front());
