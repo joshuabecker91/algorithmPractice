@@ -7,7 +7,6 @@
 
 // The minimum sum is  and the maximum sum is . The function prints
 
-
 function miniMaxSum(arr) {
     // let min = arr[0];
     // let max = arr[0];

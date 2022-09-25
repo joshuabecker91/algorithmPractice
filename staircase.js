@@ -1,7 +1,5 @@
 
 
-
-
 function staircase(n) {
     let spaces = ""
     let stairs = ""
