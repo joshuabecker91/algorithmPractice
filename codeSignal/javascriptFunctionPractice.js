@@ -9,23 +9,22 @@
 
 
 
-// let numbers = 01234;
-// let word = "word"
-// console.log(word.split(''));
-
+let numbers = 01234;
+let word = "word"
+console.log(word.split(''));
 
 // const string = 'hi there';
 
 // Converting Numbers to Integer Arrays
-    // const usingSplit = string.split('');
-    // const usingSpread = [...string];
-    // const usingArrayFrom = Array.from(string);
-    // const usingObjectAssign = Object.assign([], string);
+    const usingSplit = string.split('');
+    const usingSpread = [...string];
+    const usingArrayFrom = Array.from(string);
+    const usingObjectAssign = Object.assign([], string);
 
-    // console.log(usingSplit);
-    // console.log(usingSpread);
-    // console.log(usingArrayFrom);
-    // console.log(usingObjectAssign);
+    console.log(usingSplit);
+    console.log(usingSpread);
+    console.log(usingArrayFrom);
+    console.log(usingObjectAssign);
 
 
 
@@ -59,3 +58,20 @@ console.log(numbers.join());
 
 console.log(numbers.join(''));
 // expected output: 123456
+
+
+
+// lateRide #7 CodeSignal
+function solution(n) {
+    let minute = n % 60;
+    let hours = Math.floor(n / 60);
+    let totalTime = "" + hours + minute;
+    let splitNums = Array.from(String(totalTime), Number);
+    let sum = 0;
+
+    for (let i = 0; i < splitNums.length; i++) {
+        sum += splitNums[i];
+    }
+    return sum;
+}
+solution(240); // expects 4
