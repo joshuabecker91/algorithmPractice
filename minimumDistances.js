@@ -22,8 +22,8 @@ function minimumDistances(a) {
     return min;
 }
 
-// minimumDistances([7, 1, 3, 4, 1, 7]);
 minimumDistances([1, 2, 3, 4, 10]);
+// minimumDistances([7, 1, 3, 4, 1, 7]);
 
 // If no such value exists, return .-1
 
