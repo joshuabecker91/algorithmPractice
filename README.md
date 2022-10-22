@@ -1,2 +1,2 @@
 "# algorithmPractice" 
-root directory are all HackerRank
+root directory algorithms are all from HackerRank
