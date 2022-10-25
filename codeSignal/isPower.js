@@ -2,9 +2,7 @@
 
 
 function solution(n) {
-    if(n <= 2){
-        return false
-    }
+    if (n <= 1) return true;
     for(let a = 1; a < n; a++){
         for(let b = 2; b < n; b++){
             if(Math.pow(a, b) == n){
@@ -29,4 +27,15 @@ solution(72)
 //         return true
 //     }
 //     b++
+// }
+
+
+
+// function solution(n) {
+//     if (n == 1) return true;
+//     for (i = 2; i <= Math.sqrt(n); i++) {
+//         for (j = 2; Math.pow(i, j) < n; j++);
+//         if (Math.pow(i, j) == n) return true;
+//     }
+//     return false;
 // }
