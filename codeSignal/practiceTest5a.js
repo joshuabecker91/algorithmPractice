@@ -1,6 +1,5 @@
 
 
-
 function solution(queryType, query) {
     let hashMap = {}
     let sum = 0
@@ -24,17 +23,35 @@ function solution(queryType, query) {
                 console.log('adding to key', hashMap  )
                 // var newKey = (parseInt(key) + parseInt(query[i][0]))
                 // hashMap.set(keys=newKey)
-
                 let hashMap2 = {}
                 for(let key in hashMap){
                     var newKey = (parseInt(key) + parseInt(query[i][0]))
                     hashMap2[newKey] = hashMap[key] //value
-                    // console.log(parseInt(key), query[i][0], newKey)
-                    // hashMap[key] = '888'
-                    // key = newKey.toString()
                 }
                 hashMap = hashMap2
                 console.log(hashMap, hashMap2)
+                console.log('after key shift', hashMap)
+                break
+
+            case "get":
+                let z = hashMap[query[i][0]]
+                // console.log( z, 'get query')
+                sum+=(z)
+                break
+        }
+    }
+    console.log(hashMap)
+    console.log(sum)
+    return sum
+}
+
+solution(['insert','insert', 'addToValue', 'addToKey', 'get' ], [[1,2],[2,1], [3], [1], [3]])
+
+
+
+                // console.log(parseInt(key), query[i][0], newKey)
+                // hashMap[key] = '888'
+                // key = newKey.toString()
 
                 // Object.keys(hashMap).forEach(function(key) {
                 //     var newKey = (parseInt(key) + parseInt(query[i][0]));
@@ -59,7 +76,8 @@ function solution(queryType, query) {
                 // let temp = key
                 // delete hashMap[key]
                 // hashMap[key] = newKey;
-                console.log('after key shift', hashMap)
+
+
                 // });
                 // delete hashMap[key];
                 // for(let key in hashMap){
@@ -70,21 +88,11 @@ function solution(queryType, query) {
                 // hashMap[newPos] = hashMap[key]
                 // hashMap[key] = ""
                 // }
-                break
 
-            case "get":
-                let z = hashMap[query[i][0]]
-                // console.log( z, 'get query')
-                sum+=(z)
-                break
-        }
-    }
-    console.log(hashMap)
-    console.log(sum)
-    return sum
-}
 
-solution(['insert','insert', 'addToValue', 'addToKey', 'get' ], [[1,2],[2,1], [3], [1], [3]])
+
+
+
 
 
 // let temp1;
