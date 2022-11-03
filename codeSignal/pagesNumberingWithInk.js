@@ -1,17 +1,14 @@
 
 
-
-
 function solution(current, numberOfDigits) {
-    let ink = numberOfDigits;
     let i = 0;
-    while( ink >= current.toString().length){
-        ink -= current.toString().length
+    while(numberOfDigits >= current.toString().length){
+        numberOfDigits -= current.toString().length
         current++
         i++
     }
-    console.log("end here", current)
-    return current
+    // console.log("end here", current-1)
+    return current-1
 }
 
 // solution(1, 5)
