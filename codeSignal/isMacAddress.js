@@ -5,6 +5,7 @@ function solution(inputString) {
 }
 
 
+
 // function solution(inputString) {
 //     if (inputString.length!=17) return false
 //     var re = /[0-9A-Fa-f]{6}/g;
