@@ -52,3 +52,8 @@ solution(10,12)
                         // else {
                 //     (hashmap[x] == hashmap[y])
                 // }
+
+
+
+
+
