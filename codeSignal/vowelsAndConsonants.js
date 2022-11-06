@@ -71,3 +71,6 @@ function solution(text) {
     // }))
     // console.log(textArray.sort((a,b)=> a-b))
 }
+
+
+
