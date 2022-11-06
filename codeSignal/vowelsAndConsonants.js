@@ -1,8 +1,5 @@
 
 
-
-
-
 // count the Math.abs() ABSOLUTE difference between the number of vowels 
 // and the number of consonants in each word
 // return the array of words in the ascending order of these absolute differences
@@ -53,24 +50,22 @@ function solution(text) {
     }
     console.log(outcome)
     return outcome
+}
+
+
+
     // && a[1]-b[1]
     // return absoluteDifference.sort((a,b)=> a[0]-b[0] && a[1]-b[1])
     // let words2 = textArray.sort()
-    
+
     // console.log(words2)
     // return words2
-    
 
-    
     // console.log(textArray.sort((a,b)=> a-b))
-    
+
     // absoluteDifference.sort((function(index){
     //     return function(a,b){
     //         return(a[index] === b[index] ? 0 : )
     //     }
     // }))
     // console.log(textArray.sort((a,b)=> a-b))
-}
-
-
-
