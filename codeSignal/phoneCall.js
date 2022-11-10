@@ -74,3 +74,20 @@ solution(10, 1, 2, 22);
 //     callInMin += leftoverMin
 //     return callInMin
 // }
+
+
+
+
+function solution(min1, min2_10, min11, s) {
+    let result = 0;
+    let i = 0;
+
+    while (result <= s) {
+        i++;
+        if (i == 1) result += min1;
+        if (i >= 2 && i <= 10) result += min2_10;
+        if (i > 10) result += min11;
+    }
+
+    return --i;
+}
