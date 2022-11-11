@@ -1,21 +1,132 @@
 
 
-
 var productExceptSelf = function(nums) {
-    let answer = [];
-    for(let i = 0; i < nums.length; i++){
-        // let newArray = nums.splice(i,1);
-        answer.push(nums[i])
-        for(let x = 0; x < nums.length; x++){
-            if(x != i){
-                answer[i] *= nums[x];
-            }
+    // First, create a prefix array that moves from the left,
+    // gathering the running product of the prefix at each index
+    const prefix = []
+    // Move left in the input array
+    for (let i=0; i<nums.length; i++) {
+        // If i === 0, start with `1`, since there is no prefix
+        if (i===0) {
+            prefix[i] = 1
+        } else {
+            // Otherwise, multiply nums[i-1] times the prefix at position i-1,
+            // and add that to the prefix array at position i
+            prefix[i] = nums[i-1] * prefix[i-1]
         }
     }
-    console.log(answer)
+    // Then, let's create a suffix array
+    const suffix = []
+    // Move right in the input array
+    for (let i=nums.length - 1; i>=0; i--) {
+        // For the last index, we have no suffix, so just add a 1 to that position
+        if (i===nums.length - 1) {
+            suffix[i] = 1
+        } else {
+            // Otherwise, we multiply nums[i+1] by the suffix at position i+1
+            // and add that to the suffix array at position i
+            suffix[i] = nums[i + 1] * suffix[i + 1]
+        }
+    }
+    // Finally, our result array should be the products of prefix * suffix for each position
+    const result = []
+    for (let i=0; i<nums.length; i++) {
+        result[i] = prefix[i] * suffix[i]
+    }
+    return result
 };
 
-productExceptSelf([1,2,3,4])
+
+
+
+
+// var productExceptSelf = function(nums) {
+//     const result = [];
+//     let productSoFar = 1;
+//     for (let i = 0; i < nums.length; i++) {
+//         result[i] = productSoFar
+//         productSoFar *= nums[i]
+//         console.log(result, productSoFar)
+//     }
+//     console.log("--------------------")
+//     productSoFar = 1
+//     for (let j = nums.length-1; j >= 0; j--) {
+//         result[j] *= productSoFar
+//         productSoFar *= nums[j]
+//         console.log(result, productSoFar)
+//     }
+//     console.log(result)
+//     return result;
+// };
+
+// productExceptSelf([1,2,3,4])
+
+
+
+
+
+// var productExceptSelf = function(nums) {
+//     let answer = []
+//     // let array = []
+//     // let hashmap = {}
+//     for(let i = 0; i < nums.length; i++){
+//         let product = nums.reduce((a,b,index) => {
+//             if(i != index){
+//                 return(a*b)
+//             } else {
+//                 return a
+//             }
+//         })
+//         answer.push(product)
+//     }
+//     console.log(answer)
+//     return answer
+// }
+
+// productExceptSelf([1,2,3,4])
+
+
+//  CORRECT BUT TIMES OUT 18/22 test cases
+// var productExceptSelf = function(nums) {
+//     let answer = []
+//     // let array = []
+//     // let hashmap = {}
+//     for(let i = 0; i < nums.length; i++){
+//         let left = nums.slice(0,i)
+//         let right = nums.slice(i+1,nums.length+1)
+//         // console.log(left,right)
+//         let newArray = left.concat(right)
+//         // array.push(newArray)
+//         answer.push(newArray.reduce((a,b) => a*b))
+//         // console.log(newArray)
+//         // let product = newArray.reduce((a,b) => a*b)
+//         // // console.log(product)
+//         // answer.push(product)
+//         console.log(answer)
+//     }
+//     return answer
+// };
+
+// productExceptSelf([1,2,3,4])
+
+
+
+
+// var productExceptSelf = function(nums) {
+//     let answer = [];
+//     for(let i = 0; i < nums.length; i++){
+//         // let newArray = nums.splice(i,1);
+//         answer.push(nums[i])
+//         for(let x = 0; x < nums.length; x++){
+//             if(x != i){
+//                 answer[i] *= nums[x];
+//             }
+//         }
+//     }
+//     console.log(answer)
+// };
+
+// productExceptSelf([1,2,3,4])
 
 
 
