@@ -25,27 +25,3 @@ function solution(number, width) {
 }
 
 solution(1234, 5)
-
-
-
-
-
-
-// if(length == width){
-//     console.log(number.toString())
-//     return number.toString()
-// }
-// let output = []
-// let numberArray = number.toString().split('')
-// // console.log(length)
-// for(let i = length-1; i >= width; i--){
-//     if(numberArray[i]){
-//         console.log(numberArray[i])
-//         output.push(numberArray[i])
-//     } else {
-//         console.log(i)
-//         output.push(i)
-//     }
-// }
-// // console.log(numberArray)
-// console.log(output.reverse().join(''))
