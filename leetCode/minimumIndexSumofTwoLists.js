@@ -1,8 +1,6 @@
 
 
-
 var findRestaurant = function(list1, list2) {
-    let hashmap = {}
     let output = []
     let min = Infinity;
     for(let i = 0; i < list1.length; i++){
