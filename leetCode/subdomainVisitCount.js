@@ -17,7 +17,6 @@ var subdomainVisits = function(cpdomains) {
         let b = y[y.length-2] + "." + (y[y.length-1])
         let c = y[y.length-1]
         // console.log(a, b, c)
-
         // let word = y[j]
         if(a != ""){
             if(hashmap[a + "." + b]){
