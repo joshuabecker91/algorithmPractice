@@ -1,3 +1,5 @@
+
+
 function sortedSquaredArray(array) {
     // let arraySorted = array.sort((a, b) => a - b )
     // console.log(arraySorted)
@@ -10,3 +12,4 @@ function sortedSquaredArray(array) {
     }
     return newArray.sort((a, b) => a - b);
 }
+
