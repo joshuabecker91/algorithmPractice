@@ -12,4 +12,3 @@ function sortedSquaredArray(array) {
     }
     return newArray.sort((a, b) => a - b);
 }
-
