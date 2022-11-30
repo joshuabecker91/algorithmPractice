@@ -1,37 +1,58 @@
 
+
 var commonChars = function(words) {
-    let output = []
-    let hashmap = {}
-    for(let i = 0; i < words.length; i++){
-        for(let j = 0; j < words[i].length; j++){
-            let word = words[i]
-            if(hashmap[word[j]]){
-                hashmap[word[j]]++
-            }
-            else {
-                hashmap[word[j]] = 1
-            }
+    const result = []
+    const firstWordArr = [...words[0]]
+    for(const letter of firstWordArr) {
+        if(words.every(word => word.includes(letter))) {
+            result.push(letter)
+            words = words.map(word => word.replace(letter, ''))
         }
-    }
-    for(let key in hashmap){
-        let numOfLettersToPush = [];
-        for(let i = 0; i < words.length; i++){
-            let count = words[i].split('').filter(x => x == key).length
-            numOfLettersToPush.push(count)
-        }
-        let numOfLetters = numOfLettersToPush.sort((a,b) => a-b)[0]
-        if((hashmap[key] % words.length == 0) || (hashmap[key] > words.length)){
-            while(numOfLetters > 0){
-                output.push(key)
-                numOfLetters--
-            }
-        }
-    }
-    console.log(output)
-    return(output)
+    }    
+    console.log(result)
+    return result
 };
 
 commonChars(["cool","lock","cook"])
+
+
+// Works for 100% test cases
+// var commonChars = function(words) {
+//     let output = []
+//     let hashmap = {}
+//     for(let i = 0; i < words.length; i++){
+//         for(let j = 0; j < words[i].length; j++){
+//             let word = words[i]
+//             if(hashmap[word[j]]){
+//                 hashmap[word[j]]++
+//             }
+//             else {
+//                 hashmap[word[j]] = 1
+//             }
+//         }
+//     }
+//     for(let key in hashmap){
+//         let numOfLettersToPush = [];
+//         for(let i = 0; i < words.length; i++){
+//             let count = words[i].split('').filter(x => x == key).length
+//             numOfLettersToPush.push(count)
+//         }
+//         let numOfLetters = numOfLettersToPush.sort((a,b) => a-b)[0]
+//         if((hashmap[key] % words.length == 0) || (hashmap[key] > words.length)){
+//             while(numOfLetters > 0){
+//                 output.push(key)
+//                 numOfLetters--
+//             }
+//         }
+//     }
+//     console.log(output)
+//     return(output)
+// };
+
+// commonChars(["cool","lock","cook"])
+
+
+
 
 // var commonChars = function(words) {
 //     let output = []
