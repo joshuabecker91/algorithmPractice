@@ -1,10 +1,10 @@
 
 
+// CORRECT works for 100% test cases
 var totalMoney = function(n) {
     let total = 0;
     let w = 1;
     let d = w;
-    let temp = d
     while(n > 0){
         total += d
         // console.log(d, total)
@@ -12,8 +12,7 @@ var totalMoney = function(n) {
         d++
         if(d >= (w + 7)){
             w += 1
-            temp += 1
-            d = temp
+            d = w
         }
     }
     // console.log(total)
@@ -22,3 +21,26 @@ var totalMoney = function(n) {
 
 // totalMoney(4)
 totalMoney(10)
+
+
+
+
+// CORRECT works for 100% test cases
+// var totalMoney = function(n) {
+//     let numWeeks = Math.floor(n / 7);
+//     let remainingDays = n % 7;
+//     let total = 0;
+//     let i = numWeeks
+//     while(i > 0){
+//         total += (21 + (i * 7))
+//         i--
+//     }
+//     let j = remainingDays
+//     while(remainingDays > 0){
+//         total += (numWeeks + j)
+//         remainingDays--
+//         j--
+//     }
+//     // console.log(total)
+//     return total;
+// };
