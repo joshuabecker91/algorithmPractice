@@ -1,8 +1,9 @@
 
-
+// refactored. time O(n^2) space O(n)
 var commonChars = function(words) {
     const result = []
     const firstWordArr = [...words[0]]
+    console.log(firstWordArr)
     for(const letter of firstWordArr) {
         if(words.every(word => word.includes(letter))) {
             result.push(letter)
