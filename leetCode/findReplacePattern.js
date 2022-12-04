@@ -28,5 +28,4 @@ var findAndReplacePattern = function(words, pattern) {
     return output
 };
 
-
 findAndReplacePattern(["abc","deq","mee","aqq","dkd","ccc"], "abb")
