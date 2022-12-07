@@ -16,13 +16,13 @@ function maximumToys(prices, k) {
     }
 }
 
-maximumToys([1, 12, 5, 111, 200, 1000, 10], 50)
+maximumToys([1,2,3,4], 7)
+// maximumToys([1, 12, 5, 111, 200, 1000, 10], 50)
 
 
 // return the maximum number of toys
 
 
-// maximumToys([1,2,3,4], 7)
 // maximumToys([7,11,22,30,40], 70)
 // [0,1,2,3]
 
@@ -44,28 +44,3 @@ maximumToys([1, 12, 5, 111, 200, 1000, 10], 50)
 //     }
 // }
 
-
-// for(let j = i+1; j < prices.length; j++){
-//     console.log("i", i, "prices[i]", prices[i])
-//     console.log("j", j, "prices[j]", prices[j])
-// }
-
-
-// function maximumToys(prices, k) {
-//     // declare all my variables
-//     let x = 1
-//     let y = 2
-//     let count = 
-//     let output = []
-
-//     // write logic to solve
-//     for()
-//     while()
-//     count++
-
-
-//     // structure the data in the way it wants to be returned
-//     return output
-// }
-
-// maximumToys([1, 12, 5, 111, 200, 1000, 10], 50)
