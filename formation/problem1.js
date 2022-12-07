@@ -9,9 +9,6 @@
   *   }
   * }
   */
-function deleteMiddleNode(head) {
-  /* your code here */
-}
 
 function deleteMiddleNode(head) {
     // Many linked list problems that modify the list
