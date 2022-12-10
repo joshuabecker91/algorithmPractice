@@ -33,13 +33,12 @@ function errorDigitRange(digits){
     return (max - min)
 }
 
-// errorDigitRange(123512) //820088
+errorDigitRange(123512) //820088
 // errorDigitRange(909) //898
 // errorDigitRange(333)
 // errorDigitRange(222)
 // errorDigitRange(10)
-
-errorDigitRange(151)
+// errorDigitRange(151)
 
 
 
