@@ -1,20 +1,16 @@
 
-// https://leetcode.com/problems/reconstruct-original-digits-from-english/solutions/1688501/javascript-solution/?q=javascript&orderBy=most_relevant
+// LeetCode 423. Reconstruct Original Digits from English
+// Source Link: https://leetcode.com/problems/reconstruct-original-digits-from-english/description/
 
-// In this challenge, you're given a string containing jumbled letters from several concatenated words. 
-// Each word is a numeral from zero to nine. Each numeral may be used multiple times in the jumbled string.
+// Given a string s containing an out-of-order English representation of digits 0-9, return the digits in ascending order.
 
-// Write a program that returns integers corresponding to the numerals used to form the jumbled string. Integers must be sorted in ascending order.
+// Example 1:
+// Input: s = "owoztneoer"
+// Output: "012"
 
-// reuonnoinfe one four nine  149
-// For example, reuonnoinfe are shuffled letters of the strings one four nine. Your program's output should be 149.
-
-// Input:
-// A string formed from jumbled letters of numerals. For example:
-
-// reuonnoinfe
-// Output:
-// A sequence of integers used to form the string in ascending order. For example:
+// Example 2:
+// Input: s = "fviefuro"
+// Output: "45"
 
 
 var originalDigits = function(s) {
