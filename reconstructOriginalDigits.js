@@ -50,7 +50,6 @@ var originalDigits = function(s) {
     console.log("NUMS COUNT:", numsCount);
     console.log("'z':0, 'o':1, 'w':2, 'h':3, 'u':4, 'f':5, 'x':6, 'v':7, 'g':8, 'i':9")
     
-    // console.log(numsCount[1], "-=", numsCount[0], "+", numsCount[2], "+", numsCount[4])
     // any letters that exist in more than one word, subtract the sum of the number of times that letter is being used elsewhere.
 
     // numsCount[0], numsCount[2], numsCount[4], numsCount[6], numsCount[8] only exist once
