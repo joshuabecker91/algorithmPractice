@@ -34,26 +34,26 @@ var originalDigits = function(s) {
             numsCount[6]++;
         } else if (s[i] === "g") {  // eight
             numsCount[8]++;
-        } else if (s[i] === "o") {  // one      1
+        } else if (s[i] === "o") {  // one      1    //0, 1, 2, 4
             numsCount[1]++;
-        } else if (s[i] === "h") {  // three    3
+        } else if (s[i] === "h") {  // three    3    //3, 8
             numsCount[3]++;
-        } else if (s[i] === "f") {  // five     5
+        } else if (s[i] === "f") {  // five     5    //4, 5
             numsCount[5]++;
-        } else if (s[i] === "s") {  // seven    7
+        } else if (s[i] === "s") {  // seven    7    //6, 7
             numsCount[7]++;
-        } else if (s[i] === "i") {  // nine     9
+        } else if (s[i] === "i") {  // nine     9    //5, 6, 8, 9
             numsCount[9]++;
         } 
     }
 
     console.log("NUMS COUNT:", numsCount);
     console.log("'z':0, 'o':1, 'w':2, 'h':3, 'u':4, 'f':5, 'x':6, 'v':7, 'g':8, 'i':9")
-    
+
     // any letters that exist in more than one word, subtract the sum of the number of times that letter is being used elsewhere.
 
     // numsCount[0], numsCount[2], numsCount[4], numsCount[6], numsCount[8] only exist once
-    numsCount[1] -= (numsCount[0] + numsCount[2] + numsCount[4]); // one
+    numsCount[1] -= (numsCount[0] + numsCount[2] + numsCount[4]);
     numsCount[3] -= numsCount[8];
     numsCount[5] -= numsCount[4];
     numsCount[7] -= numsCount[6];
@@ -70,7 +70,7 @@ var originalDigits = function(s) {
             // console.log("RESULT:", result);
         }
     }
-
+    console.log(result)
     return result;
 
 };
@@ -263,29 +263,29 @@ originalDigits("reuonnoinfe")
 
 
 
-process.stdin.resume();
-process.stdin.setEncoding('utf8');
+// process.stdin.resume();
+// process.stdin.setEncoding('utf8');
 
-function jumbledNumbers(input) {
-    let hashmap = {}
-    // loop through and count how many letters
-    // then we will calculate how many of each word exists by letter count requirement for each word
-    // I cannot get this platform to work? Where do I write the function, how do I call the function and how do I pass in the input you are sending me?
-    // It doesn't specify where to write my code? 
-    let myArray = chunk.split('')
-    console.log(chunk)
-    console.log(myArray)
-}
+// function jumbledNumbers(input) {
+//     let hashmap = {}
+//     // loop through and count how many letters
+//     // then we will calculate how many of each word exists by letter count requirement for each word
+//     // I cannot get this platform to work? Where do I write the function, how do I call the function and how do I pass in the input you are sending me?
+//     // It doesn't specify where to write my code? 
+//     let myArray = chunk.split('')
+//     console.log(chunk)
+//     console.log(myArray)
+// }
 
-let stdin = '';
-process.stdin.on('data', (chunk) => {
-    stdin = `${stdin}${chunk}`;
-}).on('end', () => {
-    const lines = stdin.trim().split('\n');
-    for (const line of lines) {
-        process.stdout.write(`${line}\n`);
-    }
-});
+// let stdin = '';
+// process.stdin.on('data', (chunk) => {
+//     stdin = `${stdin}${chunk}`;
+// }).on('end', () => {
+//     const lines = stdin.trim().split('\n');
+//     for (const line of lines) {
+//         process.stdout.write(`${line}\n`);
+//     }
+// });
 
 
 // process.stdin.resume();
