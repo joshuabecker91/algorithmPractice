@@ -19,7 +19,7 @@
 var originalDigits = function(s) {
 
     let numsCount = {0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0}
-                //   z     o    w    h    u    f    x    v    g    i 
+                //   z    o    w    h    u    f    x    v    g    i 
     // let numberWords = ["zero","one","two","three","four","five","six","seven","eight","nine"]
 
     // find unique element in each index and order them appropriately
@@ -34,15 +34,15 @@ var originalDigits = function(s) {
             numsCount[6]++;
         } else if (s[i] === "g") {  // eight
             numsCount[8]++;
-        } else if (s[i] === "o") {  // one
+        } else if (s[i] === "o") {  // one      1
             numsCount[1]++;
-        } else if (s[i] === "h") {  // three
+        } else if (s[i] === "h") {  // three    3
             numsCount[3]++;
-        } else if (s[i] === "f") {  // five
+        } else if (s[i] === "f") {  // five     5
             numsCount[5]++;
-        } else if (s[i] === "s") {  // seven
+        } else if (s[i] === "s") {  // seven    7
             numsCount[7]++;
-        } else if (s[i] === "i") {  // nine
+        } else if (s[i] === "i") {  // nine     9
             numsCount[9]++;
         } 
     }
@@ -299,6 +299,3 @@ process.stdin.on('data', (chunk) => {
 // process.stdin.on("end", function () {
 //    processData(_input);
 // });
-
-
-// https://statefarm.hirevue.com/interviews/Pi8n8d5-7atbqn/
