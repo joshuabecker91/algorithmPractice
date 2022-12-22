@@ -9,15 +9,15 @@ function findIndexOfQueries(queries, array, x){
         }
     }
     console.log(locations)
-
+    
     let output = []
     for(let i = 0; i < queries.length; i++){
         let index = queries[i] - 1
         if(locations[index]){
-            console.log("yes this index exists", locations[queries[i]-1])
-            output.push( locations[queries[i]-1])
+            console.log("yes this index exists", locations[index])
+            output.push(locations[index])
         } else {
-            console.log("no this index does not exist", locations[queries[i]-1])
+            console.log("no this index does not exist", locations[index])
             output.push(-1)
         }
     }
@@ -25,8 +25,12 @@ function findIndexOfQueries(queries, array, x){
     return output 
 }
 
-
 findIndexOfQueries([100, 4, 2], [1, 2, 20, 8, 8, 1, 2, 5, 8, 0], 8) // [-1, -1, 5]
+
+
+
+
+
 // findIndexOfQueries([100, 4, 2], [1, 2, 20, 8, 8, 1, 2, 5, 8, 0], 2)
 //        ['Ks']              // find index 
 
