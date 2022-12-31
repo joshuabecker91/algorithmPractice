@@ -44,6 +44,7 @@ var partitionLabels = function(s) {
         sliceIndexes[i] = sliceIndexes[i] - sum
         sum += sliceIndexes[i]
     }
+    console.log(sliceIndexes)
     return sliceIndexes
 };
 
