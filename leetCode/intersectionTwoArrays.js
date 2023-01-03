@@ -15,6 +15,7 @@ var intersection = function(nums1, nums2) {
 intersection([1,2,2,1], [2,2])
 
 
+
 // Works 100% test cases - spread operator with new set removes duplicates, but not as efficient with space
 // var intersection = function(nums1, nums2) {
 //     nums1 = [...new Set(nums1)]

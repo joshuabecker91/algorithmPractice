@@ -17,7 +17,6 @@ var pivotIndex = function(nums) {
 pivotIndex([-1,-1,0,1,1,0])
 
 
-
 // 649 / 745 test cases
 // var pivotIndex = function(nums) {
 //     let sum = nums.reduce((a,b) => a+b)
