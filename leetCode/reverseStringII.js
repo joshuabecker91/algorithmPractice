@@ -1,29 +1,30 @@
 
 
 var reverseStr = function(s, k) {
-    // let i = 0
     let output = ""
     let count = 0
     let boolean = true
     for(let i = 0; i < s.length; i++){
         if(boolean == true){
-            let x = i + k
-            while(x >= 0){
-                output+=s[x]
-                x--
-            }
             boolean = false
-            i+=k
+            let j = i + (k-1)
+            while(j >= i){
+                if(j < s.length){
+                    output+=s[j]
+                }
+                j--
+            }
+            i+=k-1
         } else {
             output+=s[i]
             count++
             if(count >= k){
-                count = 0
                 boolean = true
+                count = 0
             }
         }
     }
-    console.log(output)
+    return output
 }
 
 reverseStr("abcdefg", 2)
