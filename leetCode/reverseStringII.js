@@ -1,12 +1,13 @@
 
 
+
 var reverseStr = function(s, k) {
     let output = ""
     let count = 0
-    let boolean = true
+    let reversing = true
     for(let i = 0; i < s.length; i++){
-        if(boolean == true){
-            boolean = false
+        if(reversing == true){
+            reversing = false
             let j = i + (k-1)
             while(j >= i){
                 if(j < s.length){
@@ -19,7 +20,7 @@ var reverseStr = function(s, k) {
             output+=s[i]
             count++
             if(count >= k){
-                boolean = true
+                reversing = true
                 count = 0
             }
         }
