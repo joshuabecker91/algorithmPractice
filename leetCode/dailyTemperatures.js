@@ -23,6 +23,7 @@ var dailyTemperatures = function (temperatures) {
 
 
 
+
 // // CORRECT Works for 47/48
 // var dailyTemperatures = function(temperatures) {
 //     let output = []
@@ -56,3 +57,27 @@ dailyTemperatures([89,62,70,58,47,47,46,76,100,70])
 
 
 
+
+// var dailyTemperatures = function(temperatures) {
+//     let output = []
+//     if (temperatures.length < 2) {
+//         return 0;
+//     }
+//     for(let i = 0; i < temperatures.length; i++){
+//         let count = 1
+//         let j = i+1
+//         if(temperatures[j] == undefined){
+//             output.push(0)
+//             return output
+//         }
+//         while(temperatures[i] >= temperatures[j] && j <= temperatures.length-1){
+//             count++
+//             j++
+//         }
+//         if(j > temperatures.length-1){
+//             output.push(0)
+//         } else {
+//             output.push(count)
+//         }
+//     }
+// };
